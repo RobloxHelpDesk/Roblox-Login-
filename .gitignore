@@ -22,3 +22,19 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+// script.js
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var errorMessage = document.getElementById('error-message');
+
+    // Simple validation (replace with actual authentication logic)
+    if (username === 'admin' && password === 'admin') {
+        // Redirect to another page or perform login logic
+        window.location.href = 'dashboard.html'; // Example redirect
+    } else {
+        errorMessage.textContent = 'Invalid username or password. Please try again.';
+    }
+});
